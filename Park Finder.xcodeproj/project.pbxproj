@@ -16,6 +16,9 @@
 		27504ECC260F78F100F88F5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27504ECA260F78F100F88F5B /* LaunchScreen.storyboard */; };
 		27504ED7260F78F100F88F5B /* Park_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504ED6260F78F100F88F5B /* Park_FinderTests.swift */; };
 		27504EE2260F78F100F88F5B /* Park_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EE1260F78F100F88F5B /* Park_FinderUITests.swift */; };
+		27504EF6260F7A5F00F88F5B /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EF5260F7A5F00F88F5B /* Park.swift */; };
+		27504F04260F7C2700F88F5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F03260F7C2700F88F5B /* Constants.swift */; };
+		27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		27504EDD260F78F100F88F5B /* Park FinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Park FinderUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27504EE1260F78F100F88F5B /* Park_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park_FinderUITests.swift; sourceTree = "<group>"; };
 		27504EE3260F78F100F88F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27504EF5260F7A5F00F88F5B /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
+		27504F03260F7C2700F88F5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkFinderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,10 @@
 		27504EBB260F78EF00F88F5B /* Park Finder */ = {
 			isa = PBXGroup;
 			children = (
+				27504F02260F7C1C00F88F5B /* Utility */,
+				27504EF4260F7A1C00F88F5B /* Controller */,
+				27504EF3260F7A1600F88F5B /* Model */,
+				27504EF2260F7A0B00F88F5B /* View */,
 				27504EBC260F78EF00F88F5B /* AppDelegate.swift */,
 				27504EBE260F78EF00F88F5B /* SceneDelegate.swift */,
 				27504EC0260F78EF00F88F5B /* ViewController.swift */,
@@ -129,6 +139,37 @@
 				27504EE3260F78F100F88F5B /* Info.plist */,
 			);
 			path = "Park FinderUITests";
+			sourceTree = "<group>";
+		};
+		27504EF2260F7A0B00F88F5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27504EF3260F7A1600F88F5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27504EF5260F7A5F00F88F5B /* Park.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27504EF4260F7A1C00F88F5B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		27504F02260F7C1C00F88F5B /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				27504F03260F7C2700F88F5B /* Constants.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,7 +304,10 @@
 			files = (
 				27504EC1260F78EF00F88F5B /* ViewController.swift in Sources */,
 				27504EC7260F78EF00F88F5B /* Park_Finder.xcdatamodeld in Sources */,
+				27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */,
 				27504EBD260F78EF00F88F5B /* AppDelegate.swift in Sources */,
+				27504F04260F7C2700F88F5B /* Constants.swift in Sources */,
+				27504EF6260F7A5F00F88F5B /* Park.swift in Sources */,
 				27504EBF260F78EF00F88F5B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
