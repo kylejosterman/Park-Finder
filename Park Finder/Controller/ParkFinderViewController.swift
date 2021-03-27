@@ -8,13 +8,16 @@
 import UIKit
 import CoreData
 import CoreLocation
+import MapKit
 
 class ParkFinderViewController: UITableViewController {
     var arr = [Item()]
     
     let defaults = UserDefaults.standard
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
+    var locationManager = CLLocationManager()
+    var currentStatus = CLLocationManager.authorizationStatus()
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,4 +57,10 @@ class ParkFinderViewController: UITableViewController {
         }
         self.tableView.reloadData()
     }
+    
+    func getParkName() {
+        
+    }
+    
+    
 }

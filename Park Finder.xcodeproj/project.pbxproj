@@ -19,6 +19,7 @@
 		27504EF6260F7A5F00F88F5B /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EF5260F7A5F00F88F5B /* Park.swift */; };
 		27504F04260F7C2700F88F5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F03260F7C2700F88F5B /* Constants.swift */; };
 		27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */; };
+		27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4192D260FC13700B1D31E /* UserLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		27504EF5260F7A5F00F88F5B /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
 		27504F03260F7C2700F88F5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkFinderViewController.swift; sourceTree = "<group>"; };
+		27D4192D260FC13700B1D31E /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				27504EF5260F7A5F00F88F5B /* Park.swift */,
+				27D4192D260FC13700B1D31E /* UserLocation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */,
 				27504EBD260F78EF00F88F5B /* AppDelegate.swift in Sources */,
 				27504F04260F7C2700F88F5B /* Constants.swift in Sources */,
+				27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */,
 				27504EF6260F7A5F00F88F5B /* Park.swift in Sources */,
 				27504EBF260F78EF00F88F5B /* SceneDelegate.swift in Sources */,
 			);
