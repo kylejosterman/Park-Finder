@@ -17,3 +17,16 @@ Park Finder was built for iPhones and iPods running iOS 14 and up
 - Run the app to install it to your device
 
 ## Screenshots
+![IMG_0194](https://user-images.githubusercontent.com/57078519/112761359-f1ecef00-8fc8-11eb-89f7-ed6040ab4c79.PNG) 
+
+
+![IMG_0191](https://user-images.githubusercontent.com/57078519/112761362-f5807600-8fc8-11eb-989e-dc7204ec8003.PNG)
+
+
+![IMG_0192](https://user-images.githubusercontent.com/57078519/112761363-f5807600-8fc8-11eb-813c-7c34a7bcf54d.PNG)
+
+
+![IMG_0193](https://user-images.githubusercontent.com/57078519/112761364-f6190c80-8fc8-11eb-9c11-20fda9b77daa.PNG)
+
+## Demo Video
+
