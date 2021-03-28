@@ -92,7 +92,7 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
         alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
               print("User cancelled")
         }))
-        present(alertController, animated: true, completion: nil)
+        present(alertController , animated: true, completion: nil)
     }
     
     
