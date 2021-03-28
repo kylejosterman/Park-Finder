@@ -20,10 +20,12 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
     var currentStatus = CLLocationManager.authorizationStatus()
     var location = UserLocation()
     var currentLocation = CLLocation()
+    let geocoder = CLGeocoder()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let aboutButton = UIImage(systemName: "info.circle")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: aboutButton, style: .plain, target: self, action: #selector(aboutButtonTapped))
 //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         self.navigationItem.setHidesBackButton(true, animated: true)
         
@@ -36,6 +38,13 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
         self.refreshControl = refreshControl
+    }
+    
+    @objc
+    func aboutButtonTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(identifier: "AboutViewController")
+        show(secondVC, sender: self)
     }
     
     @objc
@@ -63,32 +72,26 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
         // Rounds to two decimal places
         let distance = String(format: "%.2f", parkArr[indexPath.row].distance)
         cell.distanceLabel.text = distance + " Miles"
-        let button = UIButton(type: .custom)
-        button.setImage(UIImage(systemName: "star", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)), for: .normal)
-        button.sizeToFit()
-        button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-        button.tintColor = .black
-        button.addTarget(self, action: #selector(favoriteTapped), for: .touchUpInside)
-        button.tag = indexPath.row
-        cell.accessoryView = button
+//        let button = UIButton(type: .custom)
+//        button.setImage(UIImage(systemName: "star", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)), for: .normal)
+//        button.sizeToFit()
+//        button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+//        button.tintColor = .black
+//        button.tag = indexPath.row
+//        cell.accessoryView = button
         
         return cell
     }
     
-    @objc
-    func favoriteTapped(_ sender: Any) {
-        print("fav")
-    }
-    
-    
-    
     //MARK: - TableView Delegate Methods
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        saveItems()
-        
-        tableView.deselectRow(at: indexPath, animated: true)
+        let park = parkArr[indexPath.row]
+        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: park.coordinates, addressDictionary:nil))
+        mapItem.name = park.name
+        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
     }
+    
     
     func saveItems() {
         do {
@@ -117,13 +120,10 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
                 return
             }
             // Add the items to the array
+            print(self.mapItems[0].placemark.coordinate)
             self.mapItems = response.mapItems
             self.convertArray(mapItems: self.mapItems)
         }
-        
-    }
-    
-    func getDistanceFromPark() {
         
     }
     

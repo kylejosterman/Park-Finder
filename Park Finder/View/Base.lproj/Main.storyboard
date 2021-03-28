@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +19,6 @@
         <!--Park Finder-->
         <scene sceneID="RaY-Iq-YSL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-Jd-kfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tableViewController id="u9g-Ed-L6T" customClass="ParkFinderViewController" customModule="Park_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="blO-BM-4Je">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -41,6 +41,7 @@
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Park Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-E1-l5n">
                                                             <rect key="frame" x="0.0" y="0.0" width="384" height="70.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17.5"/>
+                                                            <color key="textColor" red="0.10588235294117647" green="0.30832037330000001" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTi-y5-Dda">
@@ -80,8 +81,87 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Park Finder" id="pIj-xm-aKO"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-Jd-kfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1731.8840579710147" y="113.83928571428571"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="6ua-hd-RYK">
+            <objects>
+                <viewController storyboardIdentifier="AboutViewController" title="About" id="bbx-Ql-Cqy" customClass="AboutViewController" customModule="Park_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZK5-jv-2Wd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Park Photo" translatesAutoresizingMaskIntoConstraints="NO" id="kmc-3E-Ro1">
+                                <rect key="frame" x="25" y="524" width="364" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="Rlj-Ju-62a"/>
+                                </constraints>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="se1-Ua-eP5">
+                                <rect key="frame" x="10" y="50" width="394" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="8TX-jT-xBS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Designed and built by Kyle Osterman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61g-Fz-shg">
+                                <rect key="frame" x="85.5" y="753" width="243" height="24"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="13"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COVID-19 restrictions are easing up. Parks are a great way to get out and still maintain proper social distancing." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Uq-Rn-Mcr">
+                                <rect key="frame" x="37" y="175" width="340" height="71.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4m-fh-k2j">
+                                <rect key="frame" x="37" y="276.5" width="340" height="95.5"/>
+                                <string key="text">Park Finder searches for and displays the closest parks to your location, making it easier to find and enjoy new places outdoors.</string>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This app was developed in under a day for North Carolina State Univeristy's DiamondHacks Hackathon." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ex-7D-GTv">
+                                <rect key="frame" x="37" y="402" width="340" height="71.5"/>
+                                <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="A3y-4b-bsi"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.30832037330000001" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="3ex-7D-GTv" firstAttribute="top" secondItem="w4m-fh-k2j" secondAttribute="bottom" constant="30" id="42g-qD-3kz"/>
+                            <constraint firstItem="7Uq-Rn-Mcr" firstAttribute="top" secondItem="se1-Ua-eP5" secondAttribute="bottom" constant="45" id="7AD-6n-ARW"/>
+                            <constraint firstItem="61g-Fz-shg" firstAttribute="top" secondItem="kmc-3E-Ro1" secondAttribute="bottom" constant="29" id="8pu-b4-gHx"/>
+                            <constraint firstItem="3ex-7D-GTv" firstAttribute="leading" secondItem="A3y-4b-bsi" secondAttribute="leading" constant="37" id="FYg-Xq-0nB"/>
+                            <constraint firstItem="w4m-fh-k2j" firstAttribute="top" secondItem="7Uq-Rn-Mcr" secondAttribute="bottom" constant="30" id="R7K-WO-Kau"/>
+                            <constraint firstItem="se1-Ua-eP5" firstAttribute="trailing" secondItem="A3y-4b-bsi" secondAttribute="trailing" constant="-10" id="SQ7-dd-tcY"/>
+                            <constraint firstItem="kmc-3E-Ro1" firstAttribute="leading" secondItem="A3y-4b-bsi" secondAttribute="leading" constant="25" id="V9X-Wj-RK6"/>
+                            <constraint firstItem="A3y-4b-bsi" firstAttribute="trailing" secondItem="w4m-fh-k2j" secondAttribute="trailing" constant="37" id="WgA-el-dVW"/>
+                            <constraint firstItem="A3y-4b-bsi" firstAttribute="trailing" secondItem="7Uq-Rn-Mcr" secondAttribute="trailing" constant="37" id="XNL-2z-syr"/>
+                            <constraint firstItem="w4m-fh-k2j" firstAttribute="leading" secondItem="A3y-4b-bsi" secondAttribute="leading" constant="37" id="cii-Tc-Ao7"/>
+                            <constraint firstItem="se1-Ua-eP5" firstAttribute="leading" secondItem="A3y-4b-bsi" secondAttribute="leading" constant="10" id="g9g-3h-V0g"/>
+                            <constraint firstItem="7Uq-Rn-Mcr" firstAttribute="leading" secondItem="A3y-4b-bsi" secondAttribute="leading" constant="37" id="kJw-eY-Z3g"/>
+                            <constraint firstAttribute="bottom" secondItem="61g-Fz-shg" secondAttribute="bottom" constant="31" id="mcK-ui-Cmu"/>
+                            <constraint firstItem="se1-Ua-eP5" firstAttribute="top" secondItem="A3y-4b-bsi" secondAttribute="top" constant="50" id="o3P-BT-zNB"/>
+                            <constraint firstItem="A3y-4b-bsi" firstAttribute="trailing" secondItem="kmc-3E-Ro1" secondAttribute="trailing" constant="25" id="ocv-IF-e36"/>
+                            <constraint firstItem="kmc-3E-Ro1" firstAttribute="centerX" secondItem="ZK5-jv-2Wd" secondAttribute="centerX" id="pKJ-wH-ylM"/>
+                            <constraint firstItem="A3y-4b-bsi" firstAttribute="trailing" secondItem="3ex-7D-GTv" secondAttribute="trailing" constant="37" id="t41-Se-HVL"/>
+                            <constraint firstItem="A3y-4b-bsi" firstAttribute="bottom" secondItem="kmc-3E-Ro1" secondAttribute="bottom" constant="50" id="w9k-14-WxA"/>
+                            <constraint firstItem="61g-Fz-shg" firstAttribute="centerX" secondItem="ZK5-jv-2Wd" secondAttribute="centerX" id="x9T-dc-5ZV"/>
+                            <constraint firstItem="3ex-7D-GTv" firstAttribute="top" secondItem="w4m-fh-k2j" secondAttribute="bottom" constant="30" id="xJc-Yx-M4b"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrf-fW-e9F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2446.376811594203" y="112.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bMc-50-4JN">
@@ -103,6 +183,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Logo" width="1132" height="192"/>
+        <image name="Park Photo" width="288" height="178"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
