@@ -2,7 +2,7 @@
 
 ![image](https://github.com/kylejosterman/Park-Finder/blob/main/Park%20Finder/Park%20Finder%20Logo.png)
 
-Park Finder displays nearby parks closest to the user's location. You can use Park Finder to choose which park you'd like to go to. It was built for North Carolina State Univeristy's 2021 DiamondHack Hackathon.
+Park Finder displays nearby parks closest to the user's location. You can use Park Finder to choose which park you'd like to go to. It was built for North Carolina State Univeristy's 2021 DiamondHack Hackathon. Park Finder received the ward of Best College Rookie Hack
 
 ## Features
 - Displays 25 parks in descending order from the user's location
