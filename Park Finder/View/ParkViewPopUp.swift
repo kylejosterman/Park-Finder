@@ -50,7 +50,7 @@ class ParkViewPopUp: UIView {
     @objc
     func openMapDirections() {
 //        let mapItem = MKMapItem(placemark: .init(coordinate: park?.coordinates ?? CLLocationCoordinate2D(latitude: 35.7847, longitude: 78.6821)))
-        OpenMapDirections.present(in: self, sourceView: openMapsButton)
+
         print(currentLocation)
 
         NotificationCenter.default.post(name: .didReceivePark, object: nil)

@@ -21,7 +21,6 @@
 		27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */; };
 		27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4192D260FC13700B1D31E /* UserLocation.swift */; };
 		27D4193D260FFF9B00B1D31E /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4193C260FFF9B00B1D31E /* ParkTableViewCell.swift */; };
-		27D4196226101F3D00B1D31E /* OpenMapDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4196126101F3D00B1D31E /* OpenMapDirections.swift */; };
 		27D4196726101FF400B1D31E /* ParkViewPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4196626101FF400B1D31E /* ParkViewPopUp.swift */; };
 		27D4196F2610281300B1D31E /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4196E2610281300B1D31E /* NotificationNames.swift */; };
 		27D419742610358400B1D31E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D419732610358400B1D31E /* AboutViewController.swift */; };
@@ -67,7 +66,6 @@
 		27D419562610090100B1D31E /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		27D419572610090100B1D31E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		27D419582610090100B1D31E /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
-		27D4196126101F3D00B1D31E /* OpenMapDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMapDirections.swift; sourceTree = "<group>"; };
 		27D4196626101FF400B1D31E /* ParkViewPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkViewPopUp.swift; sourceTree = "<group>"; };
 		27D4196E2610281300B1D31E /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
 		27D419732610358400B1D31E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 			children = (
 				27504EF5260F7A5F00F88F5B /* Park.swift */,
 				27D4192D260FC13700B1D31E /* UserLocation.swift */,
-				27D4196126101F3D00B1D31E /* OpenMapDirections.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -406,7 +403,6 @@
 				27504F04260F7C2700F88F5B /* Color.swift in Sources */,
 				27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */,
 				27D419742610358400B1D31E /* AboutViewController.swift in Sources */,
-				27D4196226101F3D00B1D31E /* OpenMapDirections.swift in Sources */,
 				27D4196F2610281300B1D31E /* NotificationNames.swift in Sources */,
 				27D4196726101FF400B1D31E /* ParkViewPopUp.swift in Sources */,
 				27504EF6260F7A5F00F88F5B /* Park.swift in Sources */,
