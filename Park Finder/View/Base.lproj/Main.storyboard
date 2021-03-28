@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,15 +36,15 @@
                                             <rect key="frame" x="15" y="15" width="384" height="93"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hrq-js-u5l" userLabel="Vertical Stack View">
-                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="93"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="384" height="93"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Park Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-E1-l5n">
-                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="70.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="384" height="70.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17.5"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTi-y5-Dda">
-                                                            <rect key="frame" x="0.0" y="70.5" width="334" height="22.5"/>
+                                                            <rect key="frame" x="0.0" y="70.5" width="384" height="22.5"/>
                                                             <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
                                                             <color key="textColor" red="0.40392156862745099" green="0.396078431372549" blue="0.42352941176470588" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -58,19 +57,6 @@
                                                         <constraint firstItem="oTi-y5-Dda" firstAttribute="leading" secondItem="Hrq-js-u5l" secondAttribute="leading" id="m5Q-YM-ljf"/>
                                                     </constraints>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-7K-lhR">
-                                                    <rect key="frame" x="334" y="0.0" width="50" height="93"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="50" id="OHs-Im-JVK"/>
-                                                        <constraint firstAttribute="width" constant="50" id="V1A-ac-Fql"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                                    <color key="tintColor" systemColor="labelColor"/>
-                                                    <state key="normal">
-                                                        <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
-                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
-                                                    </state>
-                                                </button>
                                             </subviews>
                                         </stackView>
                                     </subviews>
@@ -84,7 +70,6 @@
                                 <connections>
                                     <outlet property="distanceLabel" destination="oTi-y5-Dda" id="Dvu-5n-gP1"/>
                                     <outlet property="parkNameLabel" destination="5aT-E1-l5n" id="Eat-Cp-Cd2"/>
-                                    <outlet property="starButton" destination="x8x-7K-lhR" id="ksd-qP-ISl"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -118,10 +103,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star" catalog="system" width="128" height="116"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

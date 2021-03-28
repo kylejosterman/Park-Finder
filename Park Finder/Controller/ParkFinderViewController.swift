@@ -33,8 +33,17 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
             location.requestLocationAuthorization()
         }
         searchForParks()
-        
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
+        self.refreshControl = refreshControl
+    }
     
+    @objc
+    func refreshContent(refreshControl: UIRefreshControl) {
+        searchForParks()
+        parkArr.removeAll()
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -54,9 +63,24 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
         // Rounds to two decimal places
         let distance = String(format: "%.2f", parkArr[indexPath.row].distance)
         cell.distanceLabel.text = distance + " Miles"
+        let button = UIButton(type: .custom)
+        button.setImage(UIImage(systemName: "star", withConfiguration: UIImage.SymbolConfiguration(pointSize: 20, weight: .semibold)), for: .normal)
+        button.sizeToFit()
+        button.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
+        button.tintColor = .black
+        button.addTarget(self, action: #selector(favoriteTapped), for: .touchUpInside)
+        button.tag = indexPath.row
+        cell.accessoryView = button
         
         return cell
     }
+    
+    @objc
+    func favoriteTapped(_ sender: Any) {
+        print("fav")
+    }
+    
+    
     
     //MARK: - TableView Delegate Methods
     
@@ -115,8 +139,10 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
             let coordinates = mapItems[i].placemark.coordinate
             parkArr.append(Park(name: name, coordinates: coordinates, isFavorited: false, distance: distance))
         }
+
         // Sort in descending order
         parkArr = parkArr.sorted(by: { $0.distance < $1.distance })
+        
         self.tableView.reloadData()
     }
     
