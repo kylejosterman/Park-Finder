@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27504EBD260F78EF00F88F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EBC260F78EF00F88F5B /* AppDelegate.swift */; };
 		27504EBF260F78EF00F88F5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EBE260F78EF00F88F5B /* SceneDelegate.swift */; };
-		27504EC1260F78EF00F88F5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EC0260F78EF00F88F5B /* ViewController.swift */; };
 		27504EC4260F78EF00F88F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27504EC2260F78EF00F88F5B /* Main.storyboard */; };
 		27504EC7260F78EF00F88F5B /* Park_Finder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 27504EC5260F78EF00F88F5B /* Park_Finder.xcdatamodeld */; };
 		27504EC9260F78F100F88F5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27504EC8260F78F100F88F5B /* Assets.xcassets */; };
@@ -20,6 +19,7 @@
 		27504F04260F7C2700F88F5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F03260F7C2700F88F5B /* Constants.swift */; };
 		27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */; };
 		27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4192D260FC13700B1D31E /* UserLocation.swift */; };
+		27D4193D260FFF9B00B1D31E /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4193C260FFF9B00B1D31E /* ParkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +43,6 @@
 		27504EB9260F78EF00F88F5B /* Park Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Park Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27504EBC260F78EF00F88F5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27504EBE260F78EF00F88F5B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		27504EC0260F78EF00F88F5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27504EC3260F78EF00F88F5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		27504EC6260F78EF00F88F5B /* Park_Finder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Park_Finder.xcdatamodel; sourceTree = "<group>"; };
 		27504EC8260F78F100F88F5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +58,10 @@
 		27504F03260F7C2700F88F5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkFinderViewController.swift; sourceTree = "<group>"; };
 		27D4192D260FC13700B1D31E /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
+		27D4193C260FFF9B00B1D31E /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
+		27D419562610090100B1D31E /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		27D419572610090100B1D31E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		27D419582610090100B1D31E /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +118,7 @@
 				27504EF2260F7A0B00F88F5B /* View */,
 				27504EBC260F78EF00F88F5B /* AppDelegate.swift */,
 				27504EBE260F78EF00F88F5B /* SceneDelegate.swift */,
-				27504EC0260F78EF00F88F5B /* ViewController.swift */,
-				27504EC2260F78EF00F88F5B /* Main.storyboard */,
 				27504EC8260F78F100F88F5B /* Assets.xcassets */,
-				27504ECA260F78F100F88F5B /* LaunchScreen.storyboard */,
 				27504ECD260F78F100F88F5B /* Info.plist */,
 				27504EC5260F78EF00F88F5B /* Park_Finder.xcdatamodeld */,
 			);
@@ -146,6 +146,9 @@
 		27504EF2260F7A0B00F88F5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27504EC2260F78EF00F88F5B /* Main.storyboard */,
+				27504ECA260F78F100F88F5B /* LaunchScreen.storyboard */,
+				27D4193C260FFF9B00B1D31E /* ParkTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,9 +173,20 @@
 		27504F02260F7C1C00F88F5B /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				27D4194C261008AC00B1D31E /* Fonts */,
 				27504F03260F7C2700F88F5B /* Constants.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		27D4194C261008AC00B1D31E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				27D419582610090100B1D31E /* Poppins-Bold.ttf */,
+				27D419572610090100B1D31E /* Poppins-Medium.ttf */,
+				27D419562610090100B1D31E /* Poppins-SemiBold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,10 +319,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27504EC1260F78EF00F88F5B /* ViewController.swift in Sources */,
 				27504EC7260F78EF00F88F5B /* Park_Finder.xcdatamodeld in Sources */,
 				27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */,
 				27504EBD260F78EF00F88F5B /* AppDelegate.swift in Sources */,
+				27D4193D260FFF9B00B1D31E /* ParkTableViewCell.swift in Sources */,
 				27504F04260F7C2700F88F5B /* Constants.swift in Sources */,
 				27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */,
 				27504EF6260F7A5F00F88F5B /* Park.swift in Sources */,
