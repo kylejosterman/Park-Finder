@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GhH-I1-Vb7">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Poppins-Bold.ttf">
+            <string>Poppins-Bold</string>
+        </array>
+        <array key="Poppins-Medium.ttf">
+            <string>Poppins-Medium</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Park Finder-->
+        <scene sceneID="RaY-Iq-YSL">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ghh-Jd-kfd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tableViewController id="u9g-Ed-L6T" customClass="ParkFinderViewController" customModule="Park_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="blO-BM-4Je">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ParkTableViewCell" rowHeight="123" id="za3-oy-A3s" customClass="ParkTableViewCell" customModule="Park_Finder" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="123"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="za3-oy-A3s" id="khR-zi-Aaa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="123"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nq3-3k-PYn" userLabel="Horizontal Stack View">
+                                            <rect key="frame" x="15" y="15" width="384" height="93"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Hrq-js-u5l" userLabel="Vertical Stack View">
+                                                    <rect key="frame" x="0.0" y="0.0" width="334" height="93"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Park Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5aT-E1-l5n">
+                                                            <rect key="frame" x="0.0" y="0.0" width="334" height="70.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Bold" family="Poppins" pointSize="17.5"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTi-y5-Dda">
+                                                            <rect key="frame" x="0.0" y="70.5" width="334" height="22.5"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Medium" family="Poppins" pointSize="16"/>
+                                                            <color key="textColor" red="0.40392156862745099" green="0.396078431372549" blue="0.42352941176470588" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="5aT-E1-l5n" firstAttribute="leading" secondItem="Hrq-js-u5l" secondAttribute="leading" id="RiX-hD-TY8"/>
+                                                        <constraint firstAttribute="bottom" secondItem="oTi-y5-Dda" secondAttribute="bottom" id="Tda-dn-CN1"/>
+                                                        <constraint firstItem="5aT-E1-l5n" firstAttribute="top" secondItem="Hrq-js-u5l" secondAttribute="top" id="lg3-Ye-Kqb"/>
+                                                        <constraint firstItem="oTi-y5-Dda" firstAttribute="leading" secondItem="Hrq-js-u5l" secondAttribute="leading" id="m5Q-YM-ljf"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8x-7K-lhR">
+                                                    <rect key="frame" x="334" y="0.0" width="50" height="93"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="OHs-Im-JVK"/>
+                                                        <constraint firstAttribute="width" constant="50" id="V1A-ac-Fql"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <state key="normal">
+                                                        <imageReference key="image" image="star" catalog="system" symbolScale="large"/>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="semibold"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Nq3-3k-PYn" secondAttribute="trailing" constant="15" id="4zb-eR-oY1"/>
+                                        <constraint firstItem="Nq3-3k-PYn" firstAttribute="top" secondItem="khR-zi-Aaa" secondAttribute="top" constant="15" id="XkG-JN-ie3"/>
+                                        <constraint firstItem="Nq3-3k-PYn" firstAttribute="leading" secondItem="khR-zi-Aaa" secondAttribute="leading" constant="15" id="cAm-Ap-Etv"/>
+                                        <constraint firstAttribute="bottom" secondItem="Nq3-3k-PYn" secondAttribute="bottom" constant="15" id="tBx-Ln-XcL"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="distanceLabel" destination="oTi-y5-Dda" id="Dvu-5n-gP1"/>
+                                    <outlet property="parkNameLabel" destination="5aT-E1-l5n" id="Eat-Cp-Cd2"/>
+                                    <outlet property="starButton" destination="x8x-7K-lhR" id="ksd-qP-ISl"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="u9g-Ed-L6T" id="mHW-1o-hdb"/>
+                            <outlet property="delegate" destination="u9g-Ed-L6T" id="BBz-V9-7GB"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Park Finder" id="pIj-xm-aKO"/>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1731.8840579710147" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bMc-50-4JN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GhH-I1-Vb7" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qNa-pT-QY3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="u9g-Ed-L6T" kind="relationship" relationship="rootViewController" id="od6-Wf-bEL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IlC-iZ-p4I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="821.73913043478262" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="star" catalog="system" width="128" height="116"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

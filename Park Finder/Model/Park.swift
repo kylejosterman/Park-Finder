@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import CoreLocation
 
 struct Park {
-    let name: String!
-    let location: MTLCoordinate2D!
-    let isFavorited: Bool!
+    var name: String!
+    var coordinates: CLLocationCoordinate2D!
+    var isFavorited: Bool!
+    var distance: CLLocationDistance!
+    var address: String!
 }
