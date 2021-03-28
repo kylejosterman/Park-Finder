@@ -43,7 +43,7 @@ class UserLocation: NSObject, CLLocationManagerDelegate {
     }
     
     public func transitionUserToSettings() -> UIAlertController {
-        let alertController = UIAlertController (title: "Location Needed", message: "After Five needs your location in order to use this function. Tap the Settings button below and enable location.", preferredStyle: .alert)
+        let alertController = UIAlertController (title: "Location Needed", message: "Park Finder needs your location in order to search for nearby parks. Tap the Settings button below to enable location and precise location.", preferredStyle: .alert)
         let settingsAction = UIAlertAction(title: "Settings", style: .cancel) { (_) -> Void in
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else {
                 return

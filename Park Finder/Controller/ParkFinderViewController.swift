@@ -17,7 +17,6 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
     let defaults = UserDefaults.standard
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var locationManager = CLLocationManager()
-    var currentStatus = CLLocationManager.authorizationStatus()
     var location = UserLocation()
     var currentLocation = CLLocation()
     let geocoder = CLGeocoder()
@@ -29,11 +28,7 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
 //        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         self.navigationItem.setHidesBackButton(true, animated: true)
         
-        location.requestLocationAuthorization()
-        currentStatus = CLLocationManager.authorizationStatus()
-        if (CLLocationManager.authorizationStatus() != .authorizedWhenInUse || CLLocationManager.authorizationStatus() != .authorizedAlways) {
-            location.requestLocationAuthorization()
-        }
+        checkLocationPermissions()
         searchForParks()
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshContent), for: .valueChanged)
@@ -87,9 +82,17 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let park = parkArr[indexPath.row]
-        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: park.coordinates, addressDictionary:nil))
-        mapItem.name = park.name
-        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        let alertController = UIAlertController (title: "Open Apple Maps?", message: "Park Finder can give you directions to " + park.name + ".", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: park.coordinates, addressDictionary:nil))
+            mapItem.name = park.name
+            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+              print("User cancelled")
+        }))
+        present(alertController, animated: true, completion: nil)
     }
     
     
@@ -102,7 +105,18 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
         self.tableView.reloadData()
     }
     
+    func checkLocationPermissions() {
+        switch locationManager.authorizationStatus {
+        case .restricted, .denied:
+            present(location.transitionUserToSettings(), animated: true)
+        default:
+            location.requestLocationAuthorization()
+        }
+
+    }
+    
     func searchForParks() {
+        checkLocationPermissions()
         // Create a request
         let req = MKLocalSearch.Request()
         // Query for park
@@ -131,13 +145,16 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
     func convertArray(mapItems: Array<MKMapItem>) {
         parkArr.reserveCapacity(25)
         for i in 0...mapItems.count - 1 {
-            currentLocation = locationManager.location!
-            let distanceInMeters = currentLocation.distance(from: mapItems[i].placemark.location!)
-            // Converts meters to miles
-            let distance = distanceInMeters * 0.000621371
-            let name = mapItems[i].name
-            let coordinates = mapItems[i].placemark.coordinate
-            parkArr.append(Park(name: name, coordinates: coordinates, isFavorited: false, distance: distance))
+            if let currentLocation = locationManager.location {
+                let distanceInMeters = currentLocation.distance(from: mapItems[i].placemark.location!)
+                // Converts meters to miles
+                let distance = distanceInMeters * 0.000621371
+                let name = mapItems[i].name
+                let coordinates = mapItems[i].placemark.coordinate
+                parkArr.append(Park(name: name, coordinates: coordinates, isFavorited: false, distance: distance))
+
+            }
+            
         }
 
         // Sort in descending order
