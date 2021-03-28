@@ -82,9 +82,17 @@ class ParkFinderViewController: UITableViewController, CLLocationManagerDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let park = parkArr[indexPath.row]
-        let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: park.coordinates, addressDictionary:nil))
-        mapItem.name = park.name
-        mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        let alertController = UIAlertController (title: "Open Apple Maps?", message: "Park Finder can give you directions to " + park.name + ".", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+            let mapItem = MKMapItem(placemark: MKPlacemark(coordinate: park.coordinates, addressDictionary:nil))
+            mapItem.name = park.name
+            mapItem.openInMaps(launchOptions: [MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving])
+        }))
+
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+              print("User cancelled")
+        }))
+        present(alertController, animated: true, completion: nil)
     }
     
     
