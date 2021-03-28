@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Constants {
+struct Color {
     static let appColor = UIColor(red: 252/255, green: 252/255, blue: 252/255, alpha: 1)
     static let appYellow = UIColor(red: 255/255, green: 213/255, blue: 38/255, alpha: 1)
     static let appRed = UIColor(red: 255/255, green: 133/255, blue: 123/255, alpha: 1)
@@ -22,4 +22,15 @@ struct Font {
     static let poppinsMedium = "Poppins-Medium"
     static let poppinsBold = "Poppins-Bold"
     static let poppinsSemiBold = "Poppins-SemiBold"
+}
+
+struct Utility {
+    static func styleFilledButton(_ button: UIButton) {
+        
+        // Filled rounded corner style
+        button.backgroundColor = Color.appBlue
+        button.layer.cornerRadius = 8.0
+        button.tintColor = .black
+    }
+
 }

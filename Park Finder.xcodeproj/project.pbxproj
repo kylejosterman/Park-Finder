@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0074271E33B232308875FC10 /* Pods_Park_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C18F850BBFE2BF5D84E22884 /* Pods_Park_Finder.framework */; };
 		27504EBD260F78EF00F88F5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EBC260F78EF00F88F5B /* AppDelegate.swift */; };
 		27504EBF260F78EF00F88F5B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EBE260F78EF00F88F5B /* SceneDelegate.swift */; };
 		27504EC4260F78EF00F88F5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27504EC2260F78EF00F88F5B /* Main.storyboard */; };
@@ -16,10 +17,14 @@
 		27504ED7260F78F100F88F5B /* Park_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504ED6260F78F100F88F5B /* Park_FinderTests.swift */; };
 		27504EE2260F78F100F88F5B /* Park_FinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EE1260F78F100F88F5B /* Park_FinderUITests.swift */; };
 		27504EF6260F7A5F00F88F5B /* Park.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504EF5260F7A5F00F88F5B /* Park.swift */; };
-		27504F04260F7C2700F88F5B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F03260F7C2700F88F5B /* Constants.swift */; };
+		27504F04260F7C2700F88F5B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F03260F7C2700F88F5B /* Color.swift */; };
 		27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */; };
 		27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4192D260FC13700B1D31E /* UserLocation.swift */; };
 		27D4193D260FFF9B00B1D31E /* ParkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4193C260FFF9B00B1D31E /* ParkTableViewCell.swift */; };
+		27D4196226101F3D00B1D31E /* OpenMapDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4196126101F3D00B1D31E /* OpenMapDirections.swift */; };
+		27D4196726101FF400B1D31E /* ParkViewPopUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4196626101FF400B1D31E /* ParkViewPopUp.swift */; };
+		27D4196F2610281300B1D31E /* NotificationNames.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4196E2610281300B1D31E /* NotificationNames.swift */; };
+		27D419742610358400B1D31E /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D419732610358400B1D31E /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,13 +60,20 @@
 		27504EE1260F78F100F88F5B /* Park_FinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park_FinderUITests.swift; sourceTree = "<group>"; };
 		27504EE3260F78F100F88F5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		27504EF5260F7A5F00F88F5B /* Park.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Park.swift; sourceTree = "<group>"; };
-		27504F03260F7C2700F88F5B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		27504F03260F7C2700F88F5B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkFinderViewController.swift; sourceTree = "<group>"; };
 		27D4192D260FC13700B1D31E /* UserLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocation.swift; sourceTree = "<group>"; };
 		27D4193C260FFF9B00B1D31E /* ParkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkTableViewCell.swift; sourceTree = "<group>"; };
 		27D419562610090100B1D31E /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		27D419572610090100B1D31E /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		27D419582610090100B1D31E /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		27D4196126101F3D00B1D31E /* OpenMapDirections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMapDirections.swift; sourceTree = "<group>"; };
+		27D4196626101FF400B1D31E /* ParkViewPopUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkViewPopUp.swift; sourceTree = "<group>"; };
+		27D4196E2610281300B1D31E /* NotificationNames.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationNames.swift; sourceTree = "<group>"; };
+		27D419732610358400B1D31E /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		3D28C5D8B643074E0B563A15 /* Pods-Park Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Park Finder.release.xcconfig"; path = "Target Support Files/Pods-Park Finder/Pods-Park Finder.release.xcconfig"; sourceTree = "<group>"; };
+		61B208E79CF16FBDDCCCC5D2 /* Pods-Park Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Park Finder.debug.xcconfig"; path = "Target Support Files/Pods-Park Finder/Pods-Park Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		C18F850BBFE2BF5D84E22884 /* Pods_Park_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Park_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0074271E33B232308875FC10 /* Pods_Park_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +109,8 @@
 				27504ED5260F78F100F88F5B /* Park FinderTests */,
 				27504EE0260F78F100F88F5B /* Park FinderUITests */,
 				27504EBA260F78EF00F88F5B /* Products */,
+				53EB68A09E5C496022553B47 /* Pods */,
+				C1977597038CF78D6BBF23E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +164,7 @@
 				27504EC2260F78EF00F88F5B /* Main.storyboard */,
 				27504ECA260F78F100F88F5B /* LaunchScreen.storyboard */,
 				27D4193C260FFF9B00B1D31E /* ParkTableViewCell.swift */,
+				27D4196626101FF400B1D31E /* ParkViewPopUp.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +174,7 @@
 			children = (
 				27504EF5260F7A5F00F88F5B /* Park.swift */,
 				27D4192D260FC13700B1D31E /* UserLocation.swift */,
+				27D4196126101F3D00B1D31E /* OpenMapDirections.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				27504F0F260F8F8400F88F5B /* ParkFinderViewController.swift */,
+				27D419732610358400B1D31E /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -174,7 +192,8 @@
 			isa = PBXGroup;
 			children = (
 				27D4194C261008AC00B1D31E /* Fonts */,
-				27504F03260F7C2700F88F5B /* Constants.swift */,
+				27504F03260F7C2700F88F5B /* Color.swift */,
+				27D4196E2610281300B1D31E /* NotificationNames.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -189,6 +208,23 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		53EB68A09E5C496022553B47 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61B208E79CF16FBDDCCCC5D2 /* Pods-Park Finder.debug.xcconfig */,
+				3D28C5D8B643074E0B563A15 /* Pods-Park Finder.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1977597038CF78D6BBF23E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C18F850BBFE2BF5D84E22884 /* Pods_Park_Finder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -196,9 +232,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27504EE6260F78F100F88F5B /* Build configuration list for PBXNativeTarget "Park Finder" */;
 			buildPhases = (
+				A8881F3842969EB10284B78E /* [CP] Check Pods Manifest.lock */,
 				27504EB5260F78EF00F88F5B /* Sources */,
 				27504EB6260F78EF00F88F5B /* Frameworks */,
 				27504EB7260F78EF00F88F5B /* Resources */,
+				B5CA29E42C0880396CE0E693 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -314,6 +352,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A8881F3842969EB10284B78E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Park Finder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5CA29E42C0880396CE0E693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Park Finder/Pods-Park Finder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Park Finder/Pods-Park Finder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Park Finder/Pods-Park Finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		27504EB5260F78EF00F88F5B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -323,8 +403,12 @@
 				27504F10260F8F8400F88F5B /* ParkFinderViewController.swift in Sources */,
 				27504EBD260F78EF00F88F5B /* AppDelegate.swift in Sources */,
 				27D4193D260FFF9B00B1D31E /* ParkTableViewCell.swift in Sources */,
-				27504F04260F7C2700F88F5B /* Constants.swift in Sources */,
+				27504F04260F7C2700F88F5B /* Color.swift in Sources */,
 				27D4192E260FC13700B1D31E /* UserLocation.swift in Sources */,
+				27D419742610358400B1D31E /* AboutViewController.swift in Sources */,
+				27D4196226101F3D00B1D31E /* OpenMapDirections.swift in Sources */,
+				27D4196F2610281300B1D31E /* NotificationNames.swift in Sources */,
+				27D4196726101FF400B1D31E /* ParkViewPopUp.swift in Sources */,
 				27504EF6260F7A5F00F88F5B /* Park.swift in Sources */,
 				27504EBF260F78EF00F88F5B /* SceneDelegate.swift in Sources */,
 			);
@@ -499,6 +583,7 @@
 		};
 		27504EE7260F78F100F88F5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61B208E79CF16FBDDCCCC5D2 /* Pods-Park Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -518,6 +603,7 @@
 		};
 		27504EE8260F78F100F88F5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D28C5D8B643074E0B563A15 /* Pods-Park Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
