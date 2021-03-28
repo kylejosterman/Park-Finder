@@ -15,3 +15,5 @@ Park Finder was built for iPhones and iPods running iOS 14 and up
 - Download the repository
 - Open with xCode
 - Run the app to install it to your device
+
+## Screenshots
